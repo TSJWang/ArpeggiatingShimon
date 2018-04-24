@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 42.0, 85.0, 1468.0, 713.0 ],
+		"rect" : [ 42.0, 85.0, 1062.0, 713.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,11 +40,12 @@
 				"box" : 				{
 					"id" : "obj-11",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 296.0, 312.0, 34.0, 22.0 ],
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 324.5, 305.0, 43.0, 22.0 ],
 					"style" : "",
-					"text" : "print"
+					"text" : "del 20"
 				}
 
 			}
@@ -54,35 +55,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 316.0, 471.0, 34.0, 22.0 ],
+					"patching_rect" : [ 324.5, 487.0, 34.0, 22.0 ],
 					"style" : "",
 					"text" : "print"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-82",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 179.0, 450.0, 61.0, 22.0 ],
-					"style" : "",
-					"text" : "unpack i i"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-81",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "list" ],
-					"patching_rect" : [ 180.5, 414.0, 58.0, 22.0 ],
-					"style" : "",
-					"text" : "listfunnel"
 				}
 
 			}
@@ -93,7 +68,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 316.0, 378.0, 145.0, 22.0 ],
+					"patching_rect" : [ 207.5, 390.5, 145.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "noteCollector.js",
 						"parameter_enable" : 0
@@ -109,11 +84,11 @@
 					"id" : "obj-74",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "int" ],
-					"patching_rect" : [ 248.5, 128.0, 40.0, 22.0 ],
+					"numoutlets" : 4,
+					"outlettype" : [ "int", "int", "int", "int" ],
+					"patching_rect" : [ 248.5, 128.0, 50.5, 22.0 ],
 					"style" : "",
-					"text" : "t i i i"
+					"text" : "t i i i i"
 				}
 
 			}
@@ -145,6 +120,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-32",
+					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,
@@ -177,7 +153,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 248.5, 100.0, 24.0, 24.0 ],
+					"patching_rect" : [ 248.5, 93.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -191,7 +167,7 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 324.5, 175.0, 65.0, 22.0 ],
 					"style" : "",
-					"text" : "metro 250"
+					"text" : "metro 125"
 				}
 
 			}
@@ -270,7 +246,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 29.0, 293.0, 42.0, 22.0 ],
+					"patching_rect" : [ 27.0, 297.0, 42.0, 22.0 ],
 					"style" : "",
 					"text" : "midiin"
 				}
@@ -322,9 +298,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
-					"patching_rect" : [ 89.0, 293.0, 89.0, 22.0 ],
+					"patching_rect" : [ 89.0, 297.0, 76.0, 22.0 ],
 					"style" : "",
-					"text" : "seq DOE2.mid"
+					"text" : "seq 123.mid"
 				}
 
 			}
@@ -1127,6 +1103,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-77", 1 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-41", 0 ],
 					"midpoints" : [ 993.5, 305.0, 528.0, 305.0 ],
 					"source" : [ "obj-12", 0 ]
@@ -1179,7 +1162,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-77", 1 ],
+					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-150", 0 ]
 				}
 
@@ -1382,7 +1365,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-77", 0 ],
-					"midpoints" : [ 98.5, 362.0, 325.5, 362.0 ],
 					"source" : [ "obj-46", 0 ]
 				}
 
@@ -1508,6 +1490,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-23", 0 ],
+					"order" : 0,
+					"source" : [ "obj-77", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-32", 1 ],
+					"order" : 1,
 					"source" : [ "obj-77", 0 ]
 				}
 
@@ -1522,20 +1513,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-82", 0 ],
-					"source" : [ "obj-81", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-32", 1 ],
-					"source" : [ "obj-82", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"midpoints" : [ 1049.0, 746.0, 473.5, 746.0 ],
 					"source" : [ "obj-9", 0 ]
@@ -1545,7 +1522,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "noteCollector.js",
-				"bootpath" : "~/iCloudDrive/Documents/GitHub/ShimonJavaControllerHAHA/ShimonJavaController/src/ShimonController/tests",
+				"bootpath" : "~/iCloudDrive/Documents/GitHub/Arpeggiating",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
